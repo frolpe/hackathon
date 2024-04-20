@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; // Importa Link desde react-router-dom
 import '../assets/css/estiloLogin.css';
+import { useAuth0 } from '@auth0/auth0-react';
 
 const LoginPage = () => {
+    const { loginWithRedirect }=useAuth0()
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
@@ -44,7 +46,7 @@ const LoginPage = () => {
                     />
                 </div>
                 <p className="errorText">{errorMessage}</p>
-                <button className='btnIniciar' onClick={login}>Iniciar</button>
+                <button className='btnIniciar' onClick={() =>loginWithRedirect()}>Iniciar</button>
                 {/* Agrega el enlace a la página de registro */}
                 <Link className='btnRegsitrar' to="/registroEmpresa">¿No tienes una cuenta? Registrate aquí</Link>
             </div>
