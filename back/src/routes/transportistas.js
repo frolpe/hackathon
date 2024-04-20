@@ -13,7 +13,7 @@ async function main(){
         var nombre = document.getElementById('#').value
         var telefono = document.getElementById('#').value
         var correo = document.getElementById('#').value
-        var id_empresa = document.getElementById('#').value              //esta lo tiene que obtener de manera automatica dependiendo de quien sea el que lo registro
+        var id_empresa = document.getElementById('#').value        //esta lo tiene que obtener de manera automatica dependiendo de quien sea el que lo registro
     
         if(nombre && telefono && correo && id_empresa){
             if (!nombre.length == 0 && !telefono.length == 0 && !correo.length == 0 && !id_empresa == 0) {
