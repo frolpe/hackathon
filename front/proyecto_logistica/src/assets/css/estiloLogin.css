@@ -69,8 +69,13 @@ h2 {
     margin-bottom: 20px;
 }
 
+.formContainer {
+    overflow-y: auto;
+}
+
 .inputCorreo,
-.inputPassword {
+.inputPassword, 
+input {
     width: 100%;
     margin-bottom: 10px;
     padding: 10px;
@@ -88,7 +93,7 @@ h2 {
     margin-bottom: 10px;
 }
 
-.btnIniciar {
+.btnIniciar, .btnRegistrar {
     width: 100%;
     padding: 10px;
     background-color: #007bff;
@@ -98,11 +103,11 @@ h2 {
     cursor: pointer;
 }
 
-.btnIniciar:hover {
+.btnIniciar:hover, .btnRegistrar:hover {
     background-color: #0056b3;
 }
 
-.btnRegsitrar {
+.btnRegsitrar, .link {
     margin-top: 25px;
     text-decoration: none;
     color: #3e3e3e;

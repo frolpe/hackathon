@@ -1,0 +1,67 @@
+.seccionForm {
+    width: 95%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.formContainer .parteForm {
+    width: fit-content;
+    margin-right: 30px !important;
+    margin-left: 30px !important;
+}
+
+.titulo {
+    width: 95%;
+}
+
+.titulo h1 {
+    text-align: left;
+    width: 100%;
+    font-size: 18px;
+    margin-right: 30px !important;
+    margin-left: 30px !important;
+}
+
+.btnRegistrar {
+    margin-top: 22px;
+}
+
+.link {
+    transition: 0.3s;
+    margin-bottom: 50px;
+}
+
+.link:hover {
+    color: #007bff;
+}
+
+.controlesTipo { 
+    width: 95%;
+}
+
+.parteControlesTipo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    justify-content: flex-start;
+}
+
+.ckb { 
+    max-width: fit-content !important;
+    margin-left: 30px;
+    margin-right: 10px;
+}
+
+.parteControlesTipo label { 
+    position: relative;
+    bottom: 2.7px;
+    cursor: pointer;
+}
+
+.parteControlesTipo {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
