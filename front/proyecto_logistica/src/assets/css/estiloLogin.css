@@ -1,0 +1,114 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.imagenLogin {
+    height: 100vh;
+    width: 100%;
+    background-image: url("../../img/shawnanggg-kuVTWkSklJ0-unsplash.jpg");
+    background-position: center center;
+    background-size: cover;
+}
+
+.imageContainer {
+    width: 50%;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+}
+
+.formContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    padding: 0 30px;
+    height: 100vh;
+    border-radius: 5px;
+}
+
+.formContainer .text {
+    margin-bottom: 50px;
+}
+
+.formContainer h2 {
+    margin: 0;
+}
+
+.formContainer input {
+    max-width: 250px;
+}
+
+.formContainer button {
+    max-width: fit-content;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.formContainer .parteForm {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    max-width: fit-content;
+    margin: 8px 0;
+}
+
+.formContainer .parteForm label {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.inputCorreo,
+.inputPassword {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.text {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.errorText {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.btnIniciar {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btnIniciar:hover {
+    background-color: #0056b3;
+}
+
+.btnRegsitrar {
+    margin-top: 25px;
+    text-decoration: none;
+    color: #3e3e3e;
+    transition: 0.3s;
+}
+
+.btnRegsitrar:hover {
+    color: #007bff;
+}

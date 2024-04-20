@@ -1,49 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'; // Importa Routes
+import LoginPage from './views/LoginPage'; // Importa tu componente LoginPage
+import RegistroPage from './views/RegistroPage'; // Importa tu componente RegistroPage
+import Detalles from './views/Detalles';
 
-const LoginPage = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [errorMessage, setErrorMessage] = useState('');
-
-  const login = () => {
-    if (!email || !password) {
-      setErrorMessage('Por favor, introduce tu correo electrónico y contraseña.');
-    } else {
-      // Aquí iría tu lógica de autenticación
-    }
-  };
-
+const App = () => {
   return (
-    <div className="container">
-      <div className="imageContainer">
-        <img
-          src={require('./img/shawnanggg-kuVTWkSklJ0-unsplash.jpg')} // Ruta de tu imagen
-          alt="Login"
-          className="image"
-        />
-      </div>
-      <div className="formContainer">
-        <h2>Ingresa los siguientes datos</h2>
-        <input
-          type="text"
-          placeholder="Correo electrónico"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className="inputCorreo"
-        />
-        <input
-          type="password"
-          placeholder="Contraseña"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          className="inputPassword"
-        />
-        <p className="text">Ingresa los siguientes datos</p>
-        <p className="errorText">{errorMessage}</p>
-        <button className='btnIniciar' onClick={login}>Iniciar sesión</button>
-      </div>
-    </div>
+    <BrowserRouter>
+      <Routes> {/* Envuelve tus rutas en el componente Routes */}
+        <Route exact path="/" element={<LoginPage />} /> {/* Usa el atributo element con el componente */}
+        <Route path="/registroEmpresa" element={<RegistroPage />} /> {/* Usa el atributo element con el componente */}
+        <Route path="/detalles" element={<Detalles />} /> 
+      </Routes>
+    </BrowserRouter>
   );
 };
 
-export default LoginPage;
+export default App;
