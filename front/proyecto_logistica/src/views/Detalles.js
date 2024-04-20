@@ -18,8 +18,9 @@ const Detalles = () => {
 
     return (
         <div className='contenedorPrincipal'>
+            <Link style={{marginLeft: '60px'}}  className='btnRegsitrar' to="/pedidos_estado">Estatus de pedidos</Link>
             <div className='primeraSeccion'>
-                <h2>Detalles</h2>
+                <h2 style={{marginTop: '20px;'}}>Detalles</h2>
                 <button className='btnCotizar' onClick={handleOpenModal}>Cotizar</button>
             </div>
             {/* Agrega aquí tu modal */}

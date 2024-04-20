@@ -12,6 +12,7 @@ const RecomendacionesPage = () => {
     return (
         <div className='contedorPrincipal'>
             <div className='contenidoPrincipal'>
+            <Link style={{marginLeft: '60px'}}  className='btnRegsitrar' to="/detalles">Estatus de pedidos</Link>
                 <div className='seccion seccionRecomendaciones'>
                     <h2>Recomendaciones</h2>
                     <div className='contenidoTarjetas'>

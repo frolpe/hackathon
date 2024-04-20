@@ -7,6 +7,7 @@ const PedidoEstadoPage = () => {
     return (
         <div className='contedorPrincipal'>
             <div className='contenidoPrincipal'>
+            <Link style={{marginLeft: '60px'}}  className='btnRegsitrar' to="/recomendaciones">Estatus de pedidos</Link>
                 <div className='seccion seccionPendientes'>
                     <h2 style={{textAlign: 'center !important', width: '100% !important'}}>Pendientes</h2>
                     <div className='contenidoTabla'>
