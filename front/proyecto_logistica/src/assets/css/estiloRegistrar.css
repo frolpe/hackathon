@@ -65,3 +65,7 @@
     margin-bottom: 10px;
     cursor: pointer;
 }
+
+h2 {
+    margin-top: 70px !important;
+}

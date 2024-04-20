@@ -40,7 +40,7 @@ const RegistroPage = () => {
                 <div className='imagenLogin'></div>
             </div>
             <div className="formContainer" style={{ justifyContent: 'flex-start' }}>
-                <h2 style={{ marginTop: '70px' }}>Registro de empresa</h2>
+                <h2 style={{ marginTop: '70px !important' }}>Registro de empresa</h2>
 
                 <p className="text">Ingresa los siguientes datos</p>
                 <div className='titulo'>
