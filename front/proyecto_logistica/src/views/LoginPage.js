@@ -24,7 +24,7 @@ const LoginPage = () => {
                 <div className='imagenLogin'></div>
             </div>
             <div className="formContainer">
-                <h2>Iniciar sesión</h2>
+                <h2 style={{left: '0'}}>Iniciar sesión</h2>
                 <p style={{marginBottom: '5px'}} className="text">Ingresa los siguientes datos</p>
                 {/* <div className='parteForm'>
                     <label>Correo electrónico</label>
