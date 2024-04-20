@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // Importa Link desde react-router-dom
 import '../assets/css/estiloLogin.css';
+import '../assets/css/estiloPedidosEstado.css';
 
 const PedidoEstadoPage = () => {
     return (
