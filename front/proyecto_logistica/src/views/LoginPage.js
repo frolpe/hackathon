@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'; // Importa Link desde react-router-dom
 import '../assets/css/estiloLogin.css';
 import { useAuth0 } from '@auth0/auth0-react';
 
+
 const LoginPage = () => {
     const { loginWithRedirect }=useAuth0()
     const [email, setEmail] = useState('');
