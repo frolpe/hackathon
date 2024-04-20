@@ -66,6 +66,6 @@
     cursor: pointer;
 }
 
-h2 {
+.formContainer h2 {
     margin-top: 70px !important;
 }
