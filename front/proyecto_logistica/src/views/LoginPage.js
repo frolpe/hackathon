@@ -24,8 +24,8 @@ const LoginPage = () => {
             </div>
             <div className="formContainer">
                 <h2>Iniciar sesión</h2>
-                <p className="text">Ingresa los siguientes datos</p>
-                <div className='parteForm'>
+                <p style={{marginBottom: '5px'}} className="text">Ingresa los siguientes datos</p>
+                {/* <div className='parteForm'>
                     <label>Correo electrónico</label>
                     <input
                         type="text"
@@ -44,9 +44,9 @@ const LoginPage = () => {
                         onChange={(e) => setPassword(e.target.value)}
                         className="inputPassword"
                     />
-                </div>
+                </div> */}
                 <p className="errorText">{errorMessage}</p>
-                <button className='btnIniciar' onClick={() =>loginWithRedirect()}>Iniciar</button>
+                <button style={{ transform: 'scale(1)' }} className='btnIniciar' onClick={() =>loginWithRedirect()}>Iniciar</button>
                 {/* Agrega el enlace a la página de registro */}
                 <Link className='btnRegsitrar' to="/registroEmpresa">¿No tienes una cuenta? Registrate aquí</Link>
             </div>
