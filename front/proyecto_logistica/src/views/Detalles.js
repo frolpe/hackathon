@@ -1,29 +1,27 @@
-// import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // Importa Link desde react-router-dom
-// import '../assets/css/estiloLogin.css';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+// Importa aquí tu componente de modal (supongamos que se llama Modal)
+import ModalRequerimientos from './modalRequerimientos';
 
 const Detalles = () => {
-    // const [email, setEmail] = useState('');
-    // const [password, setPassword] = useState('');
-    // const [nombreEmpresa, setNombreEmpresa] = useState('')
-    // const [tipoEmpresa, setTipoEmpresa] = useState('')
-    // const [confirmPassword, setConfirmPassword] = useState('')
-    // const [errorMessage, setErrorMessage] = useState('');
+    const [modalOpen, setModalOpen] = useState(false); // Estado para controlar si el modal está abierto
 
-    // const login = () => {
-    //     if (!email || !password) {
-    //         setErrorMessage('Por favor, introduce tu correo electrónico y contraseña.');
-    //     } else {
-    //         // Aquí iría tu lógica de autenticación
-    //     }
-    // };
+    const handleOpenModal = () => {
+        setModalOpen(true); // Abre el modal cuando se hace clic en el botón
+    };
+
+    const handleCloseModal = () => {
+        setModalOpen(false); // Cierra el modal cuando se hace clic fuera del modal o en un botón de cierre
+    };
 
     return (
         <div className='contenedorPrincipal'>
             <div className='primeraSeccion'>
                 <h2>Detalles</h2>
-                <button className='btnCotizar'>Cotizar</button>
+                <button className='btnCotizar' onClick={handleOpenModal}>Cotizar</button>
             </div>
+            {/* Agrega aquí tu modal */}
+            {modalOpen && <ModalRequerimientos onClose={handleCloseModal} />} 
             <div className='segundaSeccion'>
                 <div className='infoEmpresa'>
                     <div className='contenedorInfoFoto'>
@@ -80,7 +78,6 @@ const Detalles = () => {
                 </div>
             </div>
         </div>
-       
     );
 };
 
