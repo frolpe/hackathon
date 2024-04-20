@@ -1,30 +1,27 @@
-// Coneccion a la base de datos
-const client = require('./connection');
+// Conexion a la base de datos
+const express = require('express')
+const empleados = express.Router()
+
 
 async function main(){
     try {
-        // Conectarse al MongoDB cluster
-        await client.connect();
 
-        // Acceder a la base de datos y coleccion
-        const database = client.db("Hackathoon");
-        const collection = database.collection("Transportistas");
-
-        // const { nombre, direccion, correo } = req.body;
-        const nombre = 'Federico Peluche';
-        const direccion = 'Av. Siempre Viva #2';
-        const correo =  'VendoPozole@gmail.com';
+        empleados.post('/agregar', async (req, res, next) => {
+            const { nombre_empleado, apellidos_empleado, telefono_empleado, correo_empleado, direccion_empleado } = req.body
         
-        // Crear documento
-        const document = {
-            nombre: nombre,
-            direccion: direccion,
-            correo: correo
-        };
-        // Insertar el documento
-        const result = await collection.insertOne(document);
-
-        console.log(`${result.insertedCount} 'Transportista agregado exitosamente con ID: ${result.insertedId}`);
+            if (nombre_empleado && apellidos_empleado && telefono_empleado && correo_empleado && direccion_empleado) {
+                let query = "INSERT INTO empleados(nombre_empleado, apellidos_empleado, telefono_empleado, correo_empleado, direccion_empleado)"
+                query += ` VALUES('${nombre_empleado}', '${apellidos_empleado}', ${telefono_empleado}, '${correo_empleado}', '${direccion_empleado}')`
+        
+                const rows = await db.query(query)
+        
+                if (rows.affectedRows == 1) {
+                    return res.status(200).json({code: 201, message: "Empleado agregado correctamente"})
+                }
+                return res.status(500).json({code: 500, message: "Ocurrió un error"})
+            }
+            return res.status(500).json({code: 500, message: "Campos incompletos"})
+        })
 
     } catch (e) {
         console.error(e);

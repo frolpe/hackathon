@@ -1,5 +1,3 @@
-// provethis.js
-
 const client = require('./connection'); // Assuming database.js is in the same directory
 
 async function main(){
