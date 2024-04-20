@@ -8,7 +8,7 @@ const PedidoEstadoPage = () => {
         <div className='contedorPrincipal'>
             <div className='contenidoPrincipal'>
                 <div className='seccion seccionPendientes'>
-                    <h2>Pendientes</h2>
+                    <h2 style={{textAlign: 'center !important', width: '100% !important'}}>Pendientes</h2>
                     <div className='contenidoTabla'>
                         <table className='tablaPendientes'>
                             <thead>
