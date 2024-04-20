@@ -4,7 +4,7 @@ function init(){
 
 }
 
-function agregar_t(){
+function agregar_c(){
     var nombre = document.getElementById('#').value
     var telefono = document.getElementById('#').value
     var correo = document.getElementById('#').value
