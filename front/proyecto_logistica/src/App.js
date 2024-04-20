@@ -1,25 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
 
-function App() {
+const LoginPage = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const login = () => {
+    if (!email || !password) {
+      setErrorMessage('Por favor, introduce tu correo electrónico y contraseña.');
+    } else {
+      // Aquí iría tu lógica de autenticación
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className="imageContainer">
+        <img
+          src={require('./img/shawnanggg-kuVTWkSklJ0-unsplash.jpg')} // Ruta de tu imagen
+          alt="Login"
+          className="image"
+        />
+      </div>
+      <div className="formContainer">
+        <h2>Ingresa los siguientes datos</h2>
+        <input
+          type="text"
+          placeholder="Correo electrónico"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          className="input"
+        />
+        <input
+          type="password"
+          placeholder="Contraseña"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          className="input"
+        />
+        <p className="text">Ingresa los siguientes datos</p>
+        <p className="errorText">{errorMessage}</p>
+        <button onClick={login}>Iniciar sesión</button>
+      </div>
     </div>
   );
-}
+};
 
-export default App;
+export default LoginPage;
