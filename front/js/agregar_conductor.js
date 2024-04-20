@@ -4,7 +4,7 @@ function init(){
 
 }
 
-function agregar_t(){
+function agregar_c(){
     var nombre = document.getElementById('#').value
     var telefono = document.getElementById('#').value
     var correo = document.getElementById('#').value
@@ -13,13 +13,7 @@ function agregar_t(){
     if (!nombre.length == 0 && !telefono.length == 0 && !correo.length == 0 && !id_empresa == 0) {
         var numero = parseInt(telefono)
         if((validarNumero(numero)) && (validarEmail(correo))){
-            axios({
-                method: 'post', 
-                url: 'http://localhost:3000/transportistas/agregar_transportista',
-                data:{
-
-                }
-            })
+            
         }
     }
 

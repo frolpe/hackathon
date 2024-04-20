@@ -1,4 +1,4 @@
-// Coneccion a la base de datos
+// Conexion a la base de datos
 const client = require('./connection');
 
 async function main(){
@@ -10,28 +10,59 @@ async function main(){
         const database = client.db("Hackathoon");
         const collection = database.collection("Transportistas");
 
-        // const { nombre, direccion, correo } = req.body;
-        const nombre = 'Federico Peluche';
-        const direccion = 'Av. Siempre Viva #2';
-        const correo =  'VendoPozole@gmail.com';
+        var nombre = document.getElementById('#').value
+        var telefono = document.getElementById('#').value
+        var correo = document.getElementById('#').value
+        var id_empresa = document.getElementById('#').value              //esta lo tiene que obtener de manera automatica dependiendo de quien sea el que lo registro
+    
+        if(nombre && telefono && correo && id_empresa){
+            if (!nombre.length == 0 && !telefono.length == 0 && !correo.length == 0 && !id_empresa == 0) {
+                var numero = parseInt(telefono)
+                if((validarNumero(numero)) && (validarEmail(correo))){                
+                    const newDoc = {
+                        nombre: nombre,
+                        telefono: numero,
+                        correo: correo,
+                        id_empresa: id_empresa
+                    };
+                    // Insert the document into the collection
+                    const result = collection.insertOne(newDoc);
+                    console.log(`${result.insertedCount} Documento insertado con ID: ${result.insertedId}`);
+                    // Agregar la mmda pa regresar al inicio pan
+                }
+            }
         
-        // Crear documento
-        const document = {
-            nombre: nombre,
-            direccion: direccion,
-            correo: correo
-        };
-        // Insertar el documento
-        const result = await collection.insertOne(document);
+        }
 
-        console.log(`${result.insertedCount} 'Transportista agregado exitosamente con ID: ${result.insertedId}`);
-
+        
     } catch (e) {
         console.error(e);
     } finally {
         await client.close();
     }
 
+}
+
+function validarNumero(valor) {
+    var numero = parseInt(valor)
+    if ((Number.isInteger(numero))) {
+        return true
+    } 
+    else {
+        alert("Ingresa un teléfono válido");
+    }
+}
+
+function validarEmail(valor) {
+    var correo = valor.toString()
+    emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i
+
+    if (emailRegex.test(correo)){
+        return true
+    } 
+    else {
+        alert("Ingresa un correo válido");
+    }
 }
 
 main().catch(console.error);
