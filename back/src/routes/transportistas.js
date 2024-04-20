@@ -1,6 +1,4 @@
 // Conexion a la base de datos
-const express = require('express')
-const empleados = express.Router()
 const client = require('./connection');
 
 async function main(){
@@ -15,9 +13,9 @@ async function main(){
         var nombre = document.getElementById('#').value
         var telefono = document.getElementById('#').value
         var correo = document.getElementById('#').value
-        var id_empresa = "#" //esta lo tiene que obtener de manera automatica dependiendo de quien sea el que lo registro
+        var id_empresa = document.getElementById('#').value              //esta lo tiene que obtener de manera automatica dependiendo de quien sea el que lo registro
     
-        if (nombre && telefono && correo && id_empresa) {
+        if(nombre && telefono && correo && id_empresa){
             if (!nombre.length == 0 && !telefono.length == 0 && !correo.length == 0 && !id_empresa == 0) {
                 var numero = parseInt(telefono)
                 if((validarNumero(numero)) && (validarEmail(correo))){                
@@ -30,6 +28,7 @@ async function main(){
                     // Insert the document into the collection
                     const result = collection.insertOne(newDoc);
                     console.log(`${result.insertedCount} Documento insertado con ID: ${result.insertedId}`);
+                    // Agregar la mmda pa regresar al inicio pan
                 }
             }
         
@@ -46,7 +45,6 @@ async function main(){
 
 function validarNumero(valor) {
     var numero = parseInt(valor)
-
     if ((Number.isInteger(numero))) {
         return true
     } 
@@ -66,8 +64,6 @@ function validarEmail(valor) {
         alert("Ingresa un correo válido");
     }
 }
-
-
 
 main().catch(console.error);
 
