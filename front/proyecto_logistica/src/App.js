@@ -29,18 +29,18 @@ const LoginPage = () => {
           placeholder="Correo electrónico"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="input"
+          className="inputCorreo"
         />
         <input
           type="password"
           placeholder="Contraseña"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          className="input"
+          className="inputPassword"
         />
         <p className="text">Ingresa los siguientes datos</p>
         <p className="errorText">{errorMessage}</p>
-        <button onClick={login}>Iniciar sesión</button>
+        <button className='btnIniciar' onClick={login}>Iniciar sesión</button>
       </div>
     </div>
   );
