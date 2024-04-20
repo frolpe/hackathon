@@ -103,19 +103,7 @@ const PedidoEstadoPage = () => {
                                         <button>Eliminar</button>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>Patito</td>
-                                    <td>Ganadera</td>
-                                    <td>19/04/2024</td>
-                                    <td>20/04/2024</td>
-                                    <td>Envió de diferentes...</td>
-                                    <td>08:05 hrs</td>
-                                    <td>
-                                        <button>Editar</button>
-                                        <button>Detalles</button>
-                                        <button>Eliminar</button>
-                                    </td>
-                                </tr>
+                               
                             </tbody>
                         </table>
                     </div>
