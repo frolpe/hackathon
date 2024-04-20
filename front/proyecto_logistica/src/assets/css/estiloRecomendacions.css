@@ -1,0 +1,100 @@
+.ciculo {
+    width: 44px;
+    height: 44px;
+    background-color: rgb(23, 95, 159);
+    border-radius: 100px;
+    margin-right: 20px;
+}
+
+.tarjeta {
+    width: fit-content;
+    padding: 20px;
+    box-shadow: 0 0 8px 0 #3e3e3e1f;
+    border-radius: 20px;
+    /* width: 250px; */
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.cuerpoTarjeta {
+    display: flex;
+    flex-direction: row;
+}
+
+.parteCuerpo {
+    margin: 0 25px;
+}
+
+.cuerpoTarjeta h5 {
+    margin-bottom: 8px;
+}
+
+.cuerpoTarjeta p {
+    margin-top: 0px;
+}
+
+button {
+    margin-left: 25px;
+}
+
+input { 
+    max-width: 250px;
+}
+
+h2 {
+    margin-bottom: 50px;
+}
+
+.parteForm, .parteEtiqueta { 
+    max-width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+label { 
+    margin-bottom: 10px;
+}
+
+.parteForm {
+    margin-right: 60px;
+}
+
+.parteEtiqueta {
+ margin: 0 25px;
+}
+
+.contenedorControles {
+    display: flex;
+    margin-bottom: 50px;
+    margin-left: 20px;
+}
+
+.controlesEtiquetas {
+    display: flex;
+}
+
+.contenidoTarjetas {
+    display: flex;
+}
+
+.tarjeta {
+    margin: 20px;
+}
+
+.contenidoTarjetas {
+    overflow-x: auto;
+}
+
+.contenidoPrincipal {
+    width: 100%;
+}
+
+.seccion.seccionTodas {
+    margin-top: 60px;
+}

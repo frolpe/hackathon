@@ -4,23 +4,41 @@ html, body {
     border: 0;
 }
 
+.contenidoTabla {
+    max-width: 95%;
+    min-width: 95%;
+    width: 95%;
+    overflow-x: auto;
+}
+
+h2 {
+    width: 100%;
+    text-align: center;
+    color: #3e3e3e;
+    font-size: 22px;
+    font-weight: 500;
+}
+
 .contedorPrincipal {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 40px 0;
 }
 
 .contedorPrincipal table {
     padding: 20px;
     box-shadow: 0 0 8px 0 #aaaaaa58;
     border-radius: 10px;
+    width: fit-content;
 }
 
 .contedorPrincipal table tr th {
     padding-left: 20px;
     padding-right: 20px;
+    font-weight: 550;
 }
 
 tbody tr td {
@@ -31,4 +49,44 @@ tbody tr td {
 tbody {
     max-height: 10px !important;
     overflow-y: auto;
+}
+
+.acciones { 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenidoTabla {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    background-color: #fdfdfd;
+    border: 0;
+    outline: 0;
+    border: 1px solid #3e3e3e;
+    cursor: pointer;
+    padding: 6px 8px;
+    border-radius: 5px;
+    margin: 5px 8px;
+}
+
+button:nth-child(1) {
+    color: #4a9409;
+    border-color: #4a9409;
+}
+
+button:nth-child(2) {
+    color: #4e0994;
+    border-color: #4e0994;
+}
+
+button:nth-child(3) {
+    color: #943009;
+    border-color: #943009;
 }

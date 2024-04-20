@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; // Importa Link desde react-router-dom
 import '../assets/css/estiloLogin.css';
+import '../assets/css/estiloRecomendacions.css'
 
 const RecomendacionesPage = () => {
     const [recomendacion, setRecomendacion] = useState('');
@@ -16,7 +17,76 @@ const RecomendacionesPage = () => {
                     <div className='contenidoTarjetas'>
                         <div className='tarjeta'>
                             <div className='header'>
-                                <img src='#' />
+                                <div className='ciculo'></div>
+                                <h4>Empresa</h4>
+                            </div>
+                            <div className='cuerpoTarjeta'>
+                                <div className='parteCuerpo'>
+                                    <h5>Tipo</h5>
+                                    <p className='tipoEmpresa'>Ganadera</p>
+                                </div>
+                                <div className='parteCuerpo'>
+                                    <h5>Valoración</h5>
+                                    <p className='valoracionEmpresa'>4.8</p>
+                                </div>
+                                <div className='parteCuerpo'>
+                                    <h5>Camiones activos</h5>
+                                    <p>10</p>
+                                </div>
+                            </div>
+                            <div className='footerTarjeta'>
+                                <button className='btnDetalles'>Detalles</button>
+                            </div>
+                        </div>
+                        <div className='tarjeta'>
+                            <div className='header'>
+                                <div className='ciculo'></div>
+                                <h4>Empresa</h4>
+                            </div>
+                            <div className='cuerpoTarjeta'>
+                                <div className='parteCuerpo'>
+                                    <h5>Tipo</h5>
+                                    <p className='tipoEmpresa'>Ganadera</p>
+                                </div>
+                                <div className='parteCuerpo'>
+                                    <h5>Valoración</h5>
+                                    <p className='valoracionEmpresa'>4.8</p>
+                                </div>
+                                <div className='parteCuerpo'>
+                                    <h5>Camiones activos</h5>
+                                    <p>10</p>
+                                </div>
+                            </div>
+                            <div className='footerTarjeta'>
+                                <button className='btnDetalles'>Detalles</button>
+                            </div>
+                        </div>
+                        <div className='tarjeta'>
+                            <div className='header'>
+                                <div className='ciculo'></div>
+                                <h4>Empresa</h4>
+                            </div>
+                            <div className='cuerpoTarjeta'>
+                                <div className='parteCuerpo'>
+                                    <h5>Tipo</h5>
+                                    <p className='tipoEmpresa'>Ganadera</p>
+                                </div>
+                                <div className='parteCuerpo'>
+                                    <h5>Valoración</h5>
+                                    <p className='valoracionEmpresa'>4.8</p>
+                                </div>
+                                <div className='parteCuerpo'>
+                                    <h5>Camiones activos</h5>
+                                    <p>10</p>
+                                </div>
+                            </div>
+                            <div className='footerTarjeta'>
+                                <button className='btnDetalles'>Detalles</button>
+                            </div>
+                        </div>
+                        <div className='tarjeta'>
+                            <div className='header'>
+                                <div className='ciculo'></div>
                                 <h4>Empresa</h4>
                             </div>
                             <div className='cuerpoTarjeta'>
@@ -91,7 +161,122 @@ const RecomendacionesPage = () => {
                     <div className='contenidoTarjetas'>
                         <div className='tarjeta'>
                             <div className='header'>
-                                <img src='#' />
+                                <div className='ciculo'></div>
+                                <h4>Empresa</h4>
+                            </div>
+                            <div className='cuerpoTarjeta'>
+                                <div className='parteCuerpo'>
+                                    <h5>Tipo</h5>
+                                    <p className='tipoEmpresa'>Ganadera</p>
+                                </div>
+                                <div className='parteCuerpo'>
+                                    <h5>Valoración</h5>
+                                    <p className='valoracionEmpresa'>4.8</p>
+                                </div>
+                                <div className='parteCuerpo'>
+                                    <h5>Camiones activos</h5>
+                                    <p>10</p>
+                                </div>
+                            </div>
+                            <div className='footerTarjeta'>
+                                <button className='btnDetalles'>Detalles</button>
+                            </div>
+                        </div>
+                        <div className='tarjeta'>
+                            <div className='header'>
+                                <div className='ciculo'></div>
+                                <h4>Empresa</h4>
+                            </div>
+                            <div className='cuerpoTarjeta'>
+                                <div className='parteCuerpo'>
+                                    <h5>Tipo</h5>
+                                    <p className='tipoEmpresa'>Ganadera</p>
+                                </div>
+                                <div className='parteCuerpo'>
+                                    <h5>Valoración</h5>
+                                    <p className='valoracionEmpresa'>4.8</p>
+                                </div>
+                                <div className='parteCuerpo'>
+                                    <h5>Camiones activos</h5>
+                                    <p>10</p>
+                                </div>
+                            </div>
+                            <div className='footerTarjeta'>
+                                <button className='btnDetalles'>Detalles</button>
+                            </div>
+                        </div>
+                        <div className='tarjeta'>
+                            <div className='header'>
+                                <div className='ciculo'></div>
+                                <h4>Empresa</h4>
+                            </div>
+                            <div className='cuerpoTarjeta'>
+                                <div className='parteCuerpo'>
+                                    <h5>Tipo</h5>
+                                    <p className='tipoEmpresa'>Ganadera</p>
+                                </div>
+                                <div className='parteCuerpo'>
+                                    <h5>Valoración</h5>
+                                    <p className='valoracionEmpresa'>4.8</p>
+                                </div>
+                                <div className='parteCuerpo'>
+                                    <h5>Camiones activos</h5>
+                                    <p>10</p>
+                                </div>
+                            </div>
+                            <div className='footerTarjeta'>
+                                <button className='btnDetalles'>Detalles</button>
+                            </div>
+                        </div>
+                        <div className='tarjeta'>
+                            <div className='header'>
+                                <div className='ciculo'></div>
+                                <h4>Empresa</h4>
+                            </div>
+                            <div className='cuerpoTarjeta'>
+                                <div className='parteCuerpo'>
+                                    <h5>Tipo</h5>
+                                    <p className='tipoEmpresa'>Ganadera</p>
+                                </div>
+                                <div className='parteCuerpo'>
+                                    <h5>Valoración</h5>
+                                    <p className='valoracionEmpresa'>4.8</p>
+                                </div>
+                                <div className='parteCuerpo'>
+                                    <h5>Camiones activos</h5>
+                                    <p>10</p>
+                                </div>
+                            </div>
+                            <div className='footerTarjeta'>
+                                <button className='btnDetalles'>Detalles</button>
+                            </div>
+                        </div>
+                        <div className='tarjeta'>
+                            <div className='header'>
+                                <div className='ciculo'></div>
+                                <h4>Empresa</h4>
+                            </div>
+                            <div className='cuerpoTarjeta'>
+                                <div className='parteCuerpo'>
+                                    <h5>Tipo</h5>
+                                    <p className='tipoEmpresa'>Ganadera</p>
+                                </div>
+                                <div className='parteCuerpo'>
+                                    <h5>Valoración</h5>
+                                    <p className='valoracionEmpresa'>4.8</p>
+                                </div>
+                                <div className='parteCuerpo'>
+                                    <h5>Camiones activos</h5>
+                                    <p>10</p>
+                                </div>
+                            </div>
+                            <div className='footerTarjeta'>
+                                <button className='btnDetalles'>Detalles</button>
+                            </div>
+                        </div>
+                        <div className='tarjeta'>
+                            <div className='header'>
+                                <div className='ciculo'></div>
                                 <h4>Empresa</h4>
                             </div>
                             <div className='cuerpoTarjeta'>
